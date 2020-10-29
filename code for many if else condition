@@ -1,0 +1,15 @@
+import pandas as pd 
+pd.set_option('display.max_columns', 500)
+df=pd.read_csv("https://media-doselect.s3.amazonaws.com/generic/OzvzVqK4pgg4x7qEadoZMRyVR/insurance.csv")
+def bmi_group(val):
+    if val<18.5:
+        return "Underweight"
+    if (val>=18.5) & (val<24.9):
+        return "Normal"
+    if (val>=24.9) & (val<=29.9):
+        return "Overweight"
+    if val>=30:
+        return "Obese"
+    
+df["BMI_group"] = df.bmi.apply(bmi_group)
+print(df.head())
