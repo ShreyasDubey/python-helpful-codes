@@ -1,0 +1,5 @@
+n=int(input())
+if sum(map(int, str(n))) % 2:
+    print("odd")
+else:
+    print("even")
