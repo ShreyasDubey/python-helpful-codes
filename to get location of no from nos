@@ -1,0 +1,8 @@
+import pandas as pd
+d=[1,2]
+n=[1,2,3,4,5]
+e=pd.Series(d)
+b=pd.Series(n)
+a=[pd.Index(b).get_loc(i) for i in e]
+print(a)
+print(pd.Index(b).get_loc(3))
