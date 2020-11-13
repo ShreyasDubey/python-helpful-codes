@@ -1,0 +1,10 @@
+input_list = ast.literal_eval(input_str)
+import pandas as pd
+x=list(set(input_list))
+z=len(x)
+c=pd.DataFrame(x)
+d=c.sort_values(by=0).reset_index(drop=True)
+if d.loc[0,0]==d.loc[z-1,0]:
+    print('not present')
+else:
+    print(d.loc[z-2,0])
