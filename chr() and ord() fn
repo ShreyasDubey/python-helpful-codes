@@ -1,0 +1,29 @@
+# Read the input string 
+input_string = input()
+
+# Split the string at the white spaces so that you have the individual words
+l = input_string.split(" ")
+
+# Declare a new string since you cannot mutate strings in Python
+new_s = ""
+
+# Run a loop for all the words
+for word in l:
+    
+# If the first letter of the word is in lowercase, covert it to uppercase by using 
+# the ord and chr functions. Note that that order of 'a' is 97 and order of 'A' is
+# 65. So to capitalise, you need to subtract 32.
+    if(ord(word[0]) >= ord('a') and ord(word[0]) <= ord('z')):
+        
+# Add the capitalised character to the new string alongwith a white space. Then
+# add the rest of the word as well.
+        new_s = new_s + " " + chr(ord(word[0]) - 32)
+        new_s = new_s + word[1:]
+        
+# If the first letter is already capital, just add the word to the new string as is 
+    else:
+        new_s = new_s + " " + word
+
+# Print the new string after doing an lstrip() since the first word was also added
+# with a whitespace
+print(new_s.lstrip())
