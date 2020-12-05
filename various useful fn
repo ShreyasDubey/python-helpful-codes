@@ -1,0 +1,12 @@
+# join fn : to convert list to string
+a=['s','h','r','e','y']
+d=("".join(a))
+print(d)
+# ceil and floor fns:
+import math
+n=44
+b=math.floor(math.sqrt(n))
+c=math.ceil(math.sqrt(n))
+print(b,c)
+# about *
+print(*a)
