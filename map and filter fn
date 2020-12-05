@@ -1,0 +1,15 @@
+apples=[7,8,9]
+oranges=[12,13,14]
+s=10
+t=12
+a=2
+b=2
+c=[]
+apples_mod=list(map(lambda x:x+a ,apples))
+orange_mod=list(map(lambda x:x+b,oranges))
+apple_mod_1=list(filter(lambda x:s<=x<=t,apples_mod))
+orange_mod_1=list(filter(lambda x:s<=x<=t,orange_mod))
+c.append(len(apple_mod_1))
+c.append(len(orange_mod_1))
+for i in c:
+    print(i)
