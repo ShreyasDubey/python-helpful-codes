@@ -1,0 +1,10 @@
+def beautifulDays(i, j, k):
+    o=[]
+    for l in range(i,j+1,1):
+        o.append(int(''.join([i for i in reversed(str(l))])))# reversal
+    b=[p for p in range(i,j+1,1)]
+    z=[]
+    for i,j in zip(b,o):# adding subtracting two list
+        if abs(i-j)%k==0: 
+            z.append(1)
+    return sum(z)
