@@ -1,0 +1,23 @@
+from collections import deque 
+x=[4,3,2,1,3,4]
+lst=deque(x)
+lm=lst.popleft()
+rm=lst.pop()
+cv=lm if lm>=rm else rm
+flag='false'
+while len(lst)>0:
+    if lm>=rm and cv>=lm:
+        cv=lm
+        lm=lst.popleft()
+        latest=lm
+    elif rm>lm and cv>=rm:
+        cv=rm
+        rm=lst.pop()
+        latest=rm
+    else:
+        flag='True'
+        break
+if flag=='True' or latest>cv:
+    print('No')
+else:
+    print('Yes')
