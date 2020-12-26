@@ -1,0 +1,30 @@
+s='fedcbabcd'
+n=len(s)
+try:
+    b=[i for i in s]
+    while n>2:
+        if b[n-1]>b[n-2]:
+            b[n-1],b[n-2]=b[n-2],b[n-1]
+            break
+        n=n-1    
+    s1=(''.join(b))
+    d={}
+    e={}
+    for i,j in enumerate(sorted(s)):
+        d[j]=i
+    for i,j in enumerate(sorted(s)):
+        e[i]=j
+    if s1==s:
+        z=b[0]
+        y=d[z]+1
+        x=e[y]
+        v=s.find(x)
+        b[0],b[v]=b[v],b[0]
+        p=sorted(b[1:])
+        p.insert(0,b[0])
+        s2=''.join(p)
+        print(s2)
+    else:
+        print(s1)
+except:
+    print('no answer')
