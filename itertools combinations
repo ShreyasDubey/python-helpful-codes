@@ -1,0 +1,11 @@
+from itertools import combinations
+n=int(input())
+l=input().split()
+k=int(input())
+l1=list(combinations(l,k))
+count=0
+for i in l1:
+    if 'a' in i:
+        count+=1
+p=(count/len(l1))
+print(p)
