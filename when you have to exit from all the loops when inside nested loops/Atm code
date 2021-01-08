@@ -1,0 +1,10 @@
+import sys    #required for exiting the code and displaying an error
+
+pin = input("Enter your four digit pin: ")
+attempt_count = 1
+while pin != '1234':
+    if attempt_count >= 3:
+     sys.exit("Too many invalid attempts")   #error code
+    pin = input('Invalid input, please try again: ')  
+    attempt_count += 1
+print("Pin validation successful.")
