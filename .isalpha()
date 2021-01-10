@@ -1,0 +1,11 @@
+
+input_string=Programmers are 100% fun  # remove all spaces nos and special characters and change lower to upper and vice versa
+d=[]
+#write your code here
+for i in input_string:
+    if i.isalpha():
+        if 65<=ord(i)<=90:
+            d.append(i.lower())
+        else:
+            d.append(i.upper())
+print(''.join(d))   
