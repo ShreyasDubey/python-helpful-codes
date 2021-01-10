@@ -1,0 +1,4 @@
+garbage='1235jghk34jhr'
+for i in garbage:
+    if i.isdigit():
+        print(i,end='')
