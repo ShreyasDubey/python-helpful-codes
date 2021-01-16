@@ -1,0 +1,13 @@
+
+for _ in range(6):
+    playerChoice= int(input('enter a number between 1 and 20 \n'))
+
+    if playerChoice>computerchoice:
+        print('your guess is too high')
+    elif playerChoice<computerchoice:
+        print('your guess is too low')
+    else:
+        print('Gotcha you made it! wohoo! yeee')
+        break
+else:
+    print('wo wo woha wait ! what? you wernt able to guess ! please try laters'
