@@ -1,0 +1,11 @@
+l=['shieyas','shevani','shinti']
+l1=[i.lower() for i in l]
+l2=sorted(l1,key= lambda x: len(x))
+c=l2.pop(0)
+for i in l2:
+    for j in range(len(c)):
+        if i[j]!=c[j]:
+            break
+    else:
+        c=c[:j]
+print(c[:j])
